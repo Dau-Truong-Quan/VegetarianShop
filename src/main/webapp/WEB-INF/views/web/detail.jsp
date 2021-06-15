@@ -1,5 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt"%>  
 <!DOCTYPE html>
 <html>
 <head>
@@ -30,7 +31,8 @@
 
                                             <p > 
                                                 <span class=" h3 text-warning"> 
-                                                    <span  >${detailProduct.price }</span>Đồng<span class="currency"></span>
+                                                    <span  ><fmt:formatNumber  type="number"  value="${detailProduct.price}" /></span> Đồng<span class="currency"></span>
+                                                   
                                                 </span> 
                                             </p> <!-- price-detail-wrap .// -->
                                             <dl class="item-property">
@@ -58,7 +60,7 @@
                                             </div> <!-- row.// -->
                                             <hr>
                                             <a href="#" class="btn btn-lg btn-primary text-uppercase"> Buy now </a>
-                                            <a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+                                            <a href='<c:url value='/AddCart/${o.id}'/>' class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
                                         </article> <!-- card-body.// -->
                                     </aside> <!-- col.// -->
                                 </div> <!-- row.// -->

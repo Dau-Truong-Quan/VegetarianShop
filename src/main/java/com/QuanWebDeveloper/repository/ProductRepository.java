@@ -40,7 +40,7 @@ public class ProductRepository implements ProductRepositoryImpl{
 	                list.add(new Product(
 	                		 rs.getInt(1)
 	                		,rs.getString(2)
-	                		,rs.getString(3)
+	                		,rs.getInt(3)
 	                		,rs.getString(4)
 	                		,rs.getString(5)
 	                		,rs.getString(6)
@@ -85,7 +85,7 @@ public class ProductRepository implements ProductRepositoryImpl{
 	            while (rs.next()) {
 	            	return new Product(rs.getInt(1)
 	            			,rs.getString(2)
-	                		,rs.getString(3)
+	                		,rs.getInt(3)
 	                		,rs.getString(4)
 	                		,rs.getString(5)
 	                		,rs.getString(6)
@@ -111,7 +111,7 @@ public class ProductRepository implements ProductRepositoryImpl{
 	            while (rs.next()) {
 	            	return new Product(rs.getInt(1)
 	            			,rs.getString(2)
-	                		,rs.getString(3)
+	                		,rs.getInt(3)
 	                		,rs.getString(4)
 	                		,rs.getString(5)
 	                		,rs.getString(6)
@@ -139,7 +139,7 @@ public class ProductRepository implements ProductRepositoryImpl{
             while (rs.next()) {
                 list.add(new Product(rs.getInt(1)
                 		,rs.getString(2)
-                		,rs.getString(3)
+                		,rs.getInt(3)
                 		,rs.getString(4)
                 		,rs.getString(5)
                 		,rs.getString(6)
@@ -165,7 +165,7 @@ public class ProductRepository implements ProductRepositoryImpl{
             while (rs.next()) {
                 list.add(new Product(rs.getInt(1)
                 		,rs.getString(2)
-                		,rs.getString(3)
+                		,rs.getInt(3)
                 		,rs.getString(4)
                 		,rs.getString(5)
                 		,rs.getString(6)
@@ -196,7 +196,8 @@ public class ProductRepository implements ProductRepositoryImpl{
 	        	ps.setString(4, description);
 	        	ps.setInt(5, quantity);
 	        	ps.setInt(6, cate_id);
-	        	ps.executeUpdate();
+	        	int i = ps.executeUpdate();
+	        	System.out.println(i);
 	          
 	            	
 	            

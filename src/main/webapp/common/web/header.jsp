@@ -5,7 +5,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <nav class="navbar navbar-expand-md navbar-dark bg-dark">
     <div class="container">
-        <a class="navbar-brand" href="home">Food</a>
+        <a class="navbar-brand" href='<c:url value='/trang-chu'/>' >Home</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -35,16 +35,16 @@
 
             <form action="trang-chu" method="post" class="form-inline my-2 my-lg-0">
                 <div class="input-group input-group-sm">
-                    <input oninput="searchByName(this)" id="txtSearch" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
+                    <input name	="txtSearch" type="text" class="form-control" aria-label="Small" aria-describedby="inputGroup-sizing-sm" placeholder="Search...">
                     <div class="input-group-append">
                         <button type="submit" class="btn btn-secondary btn-number">
                             <i class="fa fa-search"></i>
                         </button>
                     </div>
                 </div>
-                <a class="btn btn-success btn-sm ml-3"  href='<c:url value='/trang-chu'/>'>
-                    <i class="fa fa-shopping-cart"></i> Cart
-                    <span class="badge badge-light">3</span>
+                <a class="btn btn-success btn-sm ml-3"  href='<c:url value='/cart'/>'>
+                    <i  class="fa fa-shopping-cart"></i> Cart
+                    <span class="badge badge-light">${ Cart.size() }</span>
                 </a>
             </form>
         </div>

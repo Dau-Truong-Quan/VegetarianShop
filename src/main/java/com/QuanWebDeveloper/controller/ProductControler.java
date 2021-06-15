@@ -54,7 +54,7 @@ public class ProductControler {
 	   }
 	
 	@RequestMapping(value = "", method = RequestMethod.POST)
-	   public ModelAndView homeSearchByName(@RequestParam("txtSearch") String name,HttpServletResponse response) {
+	   public ModelAndView homeSearchByName(@RequestParam("txtSearch") String name) {
 		ModelAndView mav = new ModelAndView("web/home");
 //		List<Product> list = productService.getListProductByName(name);
 //		try {

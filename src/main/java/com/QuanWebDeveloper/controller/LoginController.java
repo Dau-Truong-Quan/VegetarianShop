@@ -41,9 +41,9 @@ public class LoginController {
 			
 			return mav;
 		}else {		
-			 mav.addObject("userSession", user);
+			
 			 session.setAttribute("mySessionAttribute", user);
-
+			 session.setMaxInactiveInterval(10*60);
 			 mav = new ModelAndView("redirect:/trang-chu");
 		}
 	      return mav; 
